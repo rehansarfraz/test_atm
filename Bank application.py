@@ -4,9 +4,9 @@ Created on Tue Jul 23 15:47:23 2019
 
 @author: Rehan
 """
-                        #The Bank Application 
+                        #The Bank Application for adding, viewing , depsiting and withrawing money
 import random 
-# initializing of arrays of fields of an account                   
+                                # initializing of arrays of fields of an account                   
 name_list= []
 address_list =[]
 phone_list =[]
@@ -33,6 +33,8 @@ while i>=0:
                                 print("user value is not valid, please re-enter")
                    
                         # Code for option 1
+                        
+                        
                         if user_input ==1:
                          acc = 0    # var for printing account no 
                          acc_no_list.append(random.randint(1,1000))
@@ -45,6 +47,8 @@ while i>=0:
                          acc = acc_no_list[i] #variable for printing account number
                          print("your account has been opened. your account no is:   0401",acc)
                          # Code for option 2
+                        
+                        
                         elif user_input ==2:
                             accountno = int(input(" please Enter your Account NO:"))
                             pinno = int(input(" please Enter the pin NO: "))
@@ -57,7 +61,7 @@ while i>=0:
                                         print("Balance", balance_list[iteration])
                                 else: print("wrong value. Please re-enter")
                                 
-
+                        # Code for option 3
                         elif user_input == 3:
                             accountno = int(input(" please Enter your Account NO:"))
                             for iteration in range(0,len(acc_no_list)):
@@ -66,7 +70,10 @@ while i>=0:
                                         required_transaction = int(input("Please enter the amount multiple of 500: "))
                                         balance_list[iteration]= required_transaction + balance_list[iteration]
                                         print("Your current balance after deposit is:", balance_list[iteration])
-                        elif user_input == 4:
+                      # Code for option 4
+                      
+                      
+                      elif user_input == 4:
                             accountno = int(input(" please Enter your Account NO:"))
                             for iteration in range(0,len(acc_no_list)):
                                 if accountno == acc_no_list[iteration] and pinno==acc_pin_list[iteration]:
@@ -76,6 +83,7 @@ while i>=0:
                         i= i+1
                 
                              # Code for continuaiton of transaction
+                       
                         print("Do you want another transaction ? Y/N")
                         user_check_2 = True  #flag variable for continuation loop
                         while user_check_2:
